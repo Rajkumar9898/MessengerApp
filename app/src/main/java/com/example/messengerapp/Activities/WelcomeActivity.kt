@@ -1,9 +1,10 @@
-package com.example.messengerapp
+package com.example.messengerapp.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.messengerapp.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -21,12 +22,12 @@ class WelcomeActivity : AppCompatActivity() {
 
 
         register_welcome_btn.setOnClickListener{
-            val intent=Intent(this@WelcomeActivity,RegisterActivity::class.java)
+            val intent=Intent(this@WelcomeActivity, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }
         login_welcome_btn.setOnClickListener{
-            val intent=Intent(this@WelcomeActivity,LoginActivity::class.java)
+            val intent=Intent(this@WelcomeActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -37,7 +38,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         firebaseUser=FirebaseAuth.getInstance().currentUser
         if(firebaseUser!=null){
-            val intent=Intent(this@WelcomeActivity,MainActivity::class.java)
+            val intent=Intent(this@WelcomeActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }

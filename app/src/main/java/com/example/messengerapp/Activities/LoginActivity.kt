@@ -1,4 +1,4 @@
-package com.example.messengerapp
+package com.example.messengerapp.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.example.messengerapp.R
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar!!.title = "Login"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {
-            val intent = Intent(this@LoginActivity,WelcomeActivity::class.java)
+            val intent = Intent(this@LoginActivity, WelcomeActivity::class.java)
             startActivity(intent)
             finish()
         }

@@ -1,10 +1,9 @@
-package com.example.messengerapp
+package com.example.messengerapp.Activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +16,7 @@ import com.example.messengerapp.Fragments.ChatFragment
 import com.example.messengerapp.Fragments.SearchFragment
 import com.example.messengerapp.Fragments.SettingFragment
 import com.example.messengerapp.ModelClasses.Users
+import com.example.messengerapp.R
 import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout: TabLayout = findViewById(R.id.tab_layout)
         val viewPager: ViewPager = findViewById(R.id.view_pager)
-        val viewPagerAdapter=ViewPagerAdapter(supportFragmentManager)
+        val viewPagerAdapter= ViewPagerAdapter(supportFragmentManager)
 
         viewPagerAdapter.addFragment(ChatFragment(),"Chats")
         viewPagerAdapter.addFragment(SearchFragment(),"Search")
